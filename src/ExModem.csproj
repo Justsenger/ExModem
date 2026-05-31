@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+		<SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>ExModem</RootNamespace>
+		<AssemblyName>ExModem</AssemblyName>
+		<ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
+		<Version>1.0</Version>
+		<Authors>Justsenger</Authors>
+		<Company>Justsenger</Company>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DebugType Condition=" '$(Configuration)' == 'Release' ">none</DebugType>
+		<DebugSymbols Condition=" '$(Configuration)' == 'Release' ">false</DebugSymbols>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="WPF-UI" Version="4.0.3" />
+		<PackageReference Include="WPF-UI.Tray" Version="4.0.3" />
+		<PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+		<!-- 仅用于发布时手动调用 illink 裁剪 WinRT 投影;不开 PublishTrimmed,不影响 WPF -->
+		<PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="8.0.27" GeneratePathProperty="true" PrivateAssets="all" />
+		<Resource Include="Assets\**\*.*" Exclude="Assets\**\*.bak" />
+	</ItemGroup>
+
+	<!-- 发布后清理:删调试符号、ref 引用程序集、整个 runtimes 目录(本应用框架依赖,里面只剩空的 win* 子目录) -->
+	<Target Name="CleanupAfterPublish" AfterTargets="Publish">
+		<ItemGroup>
+			<FilesToRemove Include="$(PublishDir)**\*.pdb" />
+			<!-- System.Drawing 三件套:通知库(Toast)底层要用,不能删;改由下方 TrimWinRTProjection 用 illink 裁剪。
+			     (托盘已改纯 Win32 不再用它,见 dll\Wpf.Ui.Tray.dll;SystemEvents 体积小保留完整) -->
+			<DirsToRemove Include="$(PublishDir)ref" />
+			<DirsToRemove Include="$(PublishDir)runtimes" />
+			<!-- 字体裁剪后的 wpf-ui dll(5.7MB→1.4MB),覆盖 NuGet 版 -->
+			<MagicDlls Include="$(MSBuildProjectDirectory)\dll\*.dll" />
+		</ItemGroup>
+		<Delete Files="@(FilesToRemove)" />
+		<RemoveDir Directories="@(DirsToRemove)" />
+		<Copy SourceFiles="@(MagicDlls)" DestinationFolder="$(PublishDir)" OverwriteReadOnlyFiles="true" SkipUnchangedFiles="false" />
+	</Target>
+
+	<!-- ★ 破镜之法:发布后以 ExModem.dll 的实际调用为根,对 24MB 的 WinRT 投影 Microsoft.Windows.SDK.NET.dll
+	     做成员级 illink 裁剪(实测 23.73MB -> ~0.4MB),其余程序集"照抄"不动。框架依赖,不开 PublishTrimmed,不裁 WPF。
+	     代码改动后会自动按新调用面重裁,不会漏成员。 -->
+	<Target Name="TrimWinRTProjection" AfterTargets="Publish" Condition="Exists('$(PublishDir)Microsoft.Windows.SDK.NET.dll')">
+		<ItemGroup>
+			<_CoreDirs Include="$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '8.0.*'))" />
+			<_WpfDirs  Include="$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.WindowsDesktop.App', '8.0.*'))" />
+			<!-- 把 publish 里"除被裁程序集本身外"的所有 dll 都作根(-a all):确保任何调用方
+			     (ExModem、Microsoft.Toolkit.Uwp.Notifications 的 Toast 等)用到的成员都不会被裁掉。
+			     被裁的三个(SDK.NET / System.Drawing.Common / System.Private.Windows.Core)要排除,否则等于全保留没裁。 -->
+			<_RootDlls Include="$(PublishDir)*.dll" Exclude="$(PublishDir)Microsoft.Windows.SDK.NET.dll;$(PublishDir)System.Drawing.Common.dll;$(PublishDir)System.Private.Windows.Core.dll" />
+		</ItemGroup>
+		<PropertyGroup>
+			<_IlLink>$(PkgMicrosoft_NET_ILLink_Tasks)\tools\net8.0\illink.dll</_IlLink>
+			<_TrimOut>$(PublishDir)__winrt_trim</_TrimOut>
+			<_RefArgs>@(_CoreDirs->'-d "%(Identity)"', ' ') @(_WpfDirs->'-d "%(Identity)"', ' ')</_RefArgs>
+			<_RootArgs>@(_RootDlls->'-a "%(Identity)" all', ' ')</_RootArgs>
+			<!-- 保险:必须找到 .NET 8 的运行时框架库(算可达性的引用)+ illink,否则宁可保留完整 24MB 也不输出会崩的裁剪版 -->
+			<_CanTrim Condition=" '@(_CoreDirs)' != '' and '@(_WpfDirs)' != '' and Exists('$(_IlLink)') ">true</_CanTrim>
+		</PropertyGroup>
+		<Warning Condition=" '$(_CanTrim)' != 'true' " Text="[破镜] 未找到 .NET 8 框架库或 illink,跳过 WinRT 投影裁剪(保留完整 ~24MB)。装好 .NET 8 Desktop Runtime 后重试。" />
+		<Message Condition=" '$(_CanTrim)' == 'true' " Importance="high" Text="[破镜] illink 裁剪 WinRT 投影 + System.Drawing 中…" />
+		<Exec Condition=" '$(_CanTrim)' == 'true' " Command="dotnet &quot;$(_IlLink)&quot; -out &quot;$(_TrimOut)&quot; -d &quot;$(PublishDir.TrimEnd('\'))&quot; $(_RefArgs) --action copy --action link Microsoft.Windows.SDK.NET --action link System.Drawing.Common --action link System.Private.Windows.Core --skip-unresolved true $(_RootArgs)" />
+		<ItemGroup Condition=" '$(_CanTrim)' == 'true' ">
+			<_TrimmedBack Include="$(_TrimOut)\Microsoft.Windows.SDK.NET.dll" />
+			<_TrimmedBack Include="$(_TrimOut)\System.Drawing.Common.dll" />
+			<_TrimmedBack Include="$(_TrimOut)\System.Private.Windows.Core.dll" />
+		</ItemGroup>
+		<Copy Condition=" '$(_CanTrim)' == 'true' " SourceFiles="@(_TrimmedBack)" DestinationFolder="$(PublishDir)" OverwriteReadOnlyFiles="true" SkipUnchangedFiles="false" />
+		<RemoveDir Condition=" '$(_CanTrim)' == 'true' " Directories="$(_TrimOut)" />
+		<Message Condition=" '$(_CanTrim)' == 'true' " Importance="high" Text="[破镜] 完成: 已裁剪 WinRT 投影 + System.Drawing(只留实际用到的成员)" />
+	</Target>
+
+	<!-- 发布完删掉外层 build 中间产物(bin\Release\<TFM>\ 那堆未裁剪的 dll/runtimes/zh-CN),只留最终 publish 目录。
+	     仅当 PublishDir 在 build 输出目录之外时才删(本项目 publish 已指到 bin\publish);默认嵌套 publish 时不动,避免误删成品。
+	     ContinueOnError:万一某文件被占用(如正从旧目录运行)也不让发布失败。 -->
+	<Target Name="CleanBuildOutputAfterPublish" AfterTargets="Publish;CleanupAfterPublish;TrimWinRTProjection">
+		<PropertyGroup>
+			<_OutFull>$([System.IO.Path]::GetFullPath('$(OutDir)'))</_OutFull>
+			<_PubFull>$([System.IO.Path]::GetFullPath('$(PublishDir)'))</_PubFull>
+			<_PubStartsWithOut>$(_PubFull.StartsWith('$(_OutFull)'))</_PubStartsWithOut>
+		</PropertyGroup>
+		<RemoveDir Condition=" '$(_PubStartsWithOut)' == 'False' " Directories="$(OutDir)" ContinueOnError="true" />
+		<Message Condition=" '$(_PubStartsWithOut)' == 'False' " Importance="high" Text="[清理] 已删除 build 中间产物,仅保留 $(PublishDir)" />
+	</Target>
+</Project>

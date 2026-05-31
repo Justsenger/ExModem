@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" /></xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" /></xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Common_Delete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Common_Copy" xml:space="preserve"><value>Copy</value></data>
+  <data name="Common_Send" xml:space="preserve"><value>Send</value></data>
+  <data name="Common_Phone" xml:space="preserve"><value>Phone</value></data>
+  <data name="Common_SimCard" xml:space="preserve"><value>SIM card</value></data>
+  <data name="Common_Sim" xml:space="preserve"><value>SIM</value></data>
+  <data name="Common_Device" xml:space="preserve"><value>Device</value></data>
+  <data name="Common_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="Common_LoadFailed" xml:space="preserve"><value>Read failed</value></data>
+  <data name="Nav_Network" xml:space="preserve"><value>Network</value></data>
+  <data name="Nav_Contacts" xml:space="preserve"><value>Contacts</value></data>
+  <data name="Chat" xml:space="preserve"><value>Messages</value></data>
+  <data name="ChatDesc" xml:space="preserve"><value>Send and receive SMS</value></data>
+  <data name="Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Tray_Show" xml:space="preserve"><value>Show main window</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>Exit</value></data>
+  <data name="Status_BannerTitle" xml:space="preserve"><value>Master advanced modem features with ease</value></data>
+  <data name="Status_DeviceInfo" xml:space="preserve"><value>Device info</value></data>
+  <data name="Status_CurrentNetwork" xml:space="preserve"><value>Current network</value></data>
+  <data name="Status_Carrier" xml:space="preserve"><value>Carrier</value></data>
+  <data name="Status_RegState" xml:space="preserve"><value>Registration</value></data>
+  <data name="Status_SignalStrength" xml:space="preserve"><value>Signal strength</value></data>
+  <data name="Status_SmsCenter" xml:space="preserve"><value>SMS center</value></data>
+  <data name="Status_Signal" xml:space="preserve"><value>Signal</value></data>
+  <data name="Status_Manufacturer" xml:space="preserve"><value>Manufacturer</value></data>
+  <data name="Status_Model" xml:space="preserve"><value>Model</value></data>
+  <data name="Status_Firmware" xml:space="preserve"><value>Firmware version</value></data>
+  <data name="Status_BasicSettings" xml:space="preserve"><value>Basic settings</value></data>
+  <data name="Status_DataSwitch" xml:space="preserve"><value>Data switch</value></data>
+  <data name="Status_DataSwitchDesc" xml:space="preserve"><value>Allow internet access over cellular data</value></data>
+  <data name="Status_NetworkMode" xml:space="preserve"><value>Network mode</value></data>
+  <data name="Status_NetworkModeDesc" xml:space="preserve"><value>4G provides SMS and basic internet; 5G provides high-speed internet</value></data>
+  <data name="Status_AutoSwitch" xml:space="preserve"><value>Auto switch network</value></data>
+  <data name="Status_AutoSwitchDesc" xml:space="preserve"><value>Use 4G when idle, 5G under load</value></data>
+  <data name="Status_ModeLoading" xml:space="preserve"><value>Loading…</value></data>
+  <data name="Status_ModeHint5G" xml:space="preserve"><value>Current: 5G · fast (no SMS)</value></data>
+  <data name="Status_ModeHintLte" xml:space="preserve"><value>Current: LTE · SMS enabled</value></data>
+  <data name="Status_DataEnabling" xml:space="preserve"><value>Enabling cellular data…</value></data>
+  <data name="Status_DataDisabling" xml:space="preserve"><value>Disabling cellular data…</value></data>
+  <data name="Status_DataEnabled" xml:space="preserve"><value>✓ Cellular data on</value></data>
+  <data name="Status_DataDisabled" xml:space="preserve"><value>✓ Cellular data off</value></data>
+  <data name="Status_SmsModeLte" xml:space="preserve"><value>SMS mode (LTE)</value></data>
+  <data name="Status_Switching5G" xml:space="preserve"><value>Switching to 5G (via LTE to avoid dropout)…</value></data>
+  <data name="Status_Switched5G" xml:space="preserve"><value>✓ Switched to 5G</value></data>
+  <data name="Status_Switch5GFailed" xml:space="preserve"><value>✗ Failed to switch to 5G (check modem)</value></data>
+  <data name="Status_SwitchingTo" xml:space="preserve"><value>Switching to {0}… (cellular may briefly reconnect)</value></data>
+  <data name="Status_SwitchedTo" xml:space="preserve"><value>✓ Switched to {0}</value></data>
+  <data name="Status_SwitchFailed" xml:space="preserve"><value>✗ Switch failed (check modem)</value></data>
+  <data name="Status_AutoOn" xml:space="preserve"><value>Auto-switch on: idle→LTE (live SMS), heavy→5G (speed)</value></data>
+  <data name="Status_AutoOff" xml:space="preserve"><value>Auto-switch off</value></data>
+  <data name="Status_CopyTitle" xml:space="preserve"><value>ExModem cellular status</value></data>
+  <data name="Status_Copied" xml:space="preserve"><value>✓ All parameters copied to clipboard</value></data>
+  <data name="Status_CopyFailed" xml:space="preserve"><value>Copy failed</value></data>
+  <data name="Status_Copy_Adapter" xml:space="preserve"><value>Adapter</value></data>
+  <data name="Status_Copy_DataClass" xml:space="preserve"><value>Current network (Data Class)</value></data>
+  <data name="Status_Copy_ModePref" xml:space="preserve"><value>Set mode (mode_pref)</value></data>
+  <data name="Reg_NotRegistered" xml:space="preserve"><value>Not registered</value></data>
+  <data name="Reg_Searching" xml:space="preserve"><value>Searching…</value></data>
+  <data name="Reg_Home" xml:space="preserve"><value>Registered</value></data>
+  <data name="Reg_Roaming" xml:space="preserve"><value>Roaming</value></data>
+  <data name="Reg_Partner" xml:space="preserve"><value>Partner network</value></data>
+  <data name="Reg_Denied" xml:space="preserve"><value>Registration denied</value></data>
+  <data name="Signal_None" xml:space="preserve"><value>No signal</value></data>
+  <data name="Carrier_ChinaMobile" xml:space="preserve"><value>China Mobile</value></data>
+  <data name="Carrier_ChinaUnicom" xml:space="preserve"><value>China Unicom</value></data>
+  <data name="Carrier_ChinaTelecom" xml:space="preserve"><value>China Telecom</value></data>
+  <data name="Carrier_ChinaBroadnet" xml:space="preserve"><value>China Broadnet</value></data>
+  <data name="Chat_NewConversation" xml:space="preserve"><value>New conversation</value></data>
+  <data name="Chat_SearchPlaceholder" xml:space="preserve"><value>Search SMS / number…</value></data>
+  <data name="Chat_DeleteConversation" xml:space="preserve"><value>Delete conversation</value></data>
+  <data name="Chat_CopyNumberTip" xml:space="preserve"><value>Click to copy number</value></data>
+  <data name="Chat_RecipientPlaceholder" xml:space="preserve"><value>Recipient number…</value></data>
+  <data name="Chat_SaveAsContact" xml:space="preserve"><value>Save as contact</value></data>
+  <data name="Chat_InputPlaceholder" xml:space="preserve"><value>Type a message…</value></data>
+  <data name="Chat_Status_ConvoDeleted" xml:space="preserve"><value>Conversation {0} deleted</value></data>
+  <data name="Chat_Status_NewConvo" xml:space="preserve"><value>New conversation: enter a number above, type below to send</value></data>
+  <data name="Chat_Status_NeedNumber" xml:space="preserve"><value>Please enter a recipient number</value></data>
+  <data name="Chat_Status_NeedText" xml:space="preserve"><value>Please enter message text</value></data>
+  <data name="Chat_Toast_SendFailedLte" xml:space="preserve"><value>Send failed: {0} (SMS requires LTE)</value></data>
+  <data name="Chat_Toast_SendError" xml:space="preserve"><value>Send error: {0}</value></data>
+  <data name="Chat_Status_SimDeleted" xml:space="preserve"><value>Deleted one SMS from SIM</value></data>
+  <data name="Chat_Status_SimDeleteFailed" xml:space="preserve"><value>Failed to delete SIM SMS</value></data>
+  <data name="Chat_Status_MsgDeleted" xml:space="preserve"><value>Message deleted</value></data>
+  <data name="Chat_Status_Synced" xml:space="preserve"><value>Synced {0} system + {1} SIM / {2} conversations</value></data>
+  <data name="Chat_Status_SyncFailed" xml:space="preserve"><value>✗ Failed to read system SMS store: {0}</value></data>
+  <data name="Chat_DeleteFailed" xml:space="preserve"><value>Delete failed: {0}</value></data>
+  <data name="Msg_StatusFailed" xml:space="preserve"><value>Failed</value></data>
+  <data name="Msg_StatusSending" xml:space="preserve"><value>Sending…</value></data>
+  <data name="Contacts_Title" xml:space="preserve"><value>Contacts</value></data>
+  <data name="Contacts_AddTip" xml:space="preserve"><value>Add contact</value></data>
+  <data name="Contacts_SearchPlaceholder" xml:space="preserve"><value>Search name or number…</value></data>
+  <data name="Contacts_EmptyHint" xml:space="preserve"><value>Select a contact to view/edit, or tap + to add</value></data>
+  <data name="Contacts_Name" xml:space="preserve"><value>Name</value></data>
+  <data name="Contacts_PhoneNumber" xml:space="preserve"><value>Phone number</value></data>
+  <data name="Contacts_SaveTo" xml:space="preserve"><value>Save to</value></data>
+  <data name="Contacts_TitleAdd" xml:space="preserve"><value>Add contact</value></data>
+  <data name="Contacts_TitleEdit" xml:space="preserve"><value>Edit contact</value></data>
+  <data name="Contacts_SimSyncing" xml:space="preserve"><value>Syncing SIM…</value></data>
+  <data name="Contacts_CountText" xml:space="preserve"><value>{0} contacts</value></data>
+  <data name="Contacts_ChooseAvatar" xml:space="preserve"><value>Choose avatar</value></data>
+  <data name="Contacts_ImageFilter" xml:space="preserve"><value>Images</value></data>
+  <data name="Contacts_NeedNumber" xml:space="preserve"><value>Please enter a number</value></data>
+  <data name="Contacts_Saved" xml:space="preserve"><value>Saved</value></data>
+  <data name="Contacts_SaveFailed" xml:space="preserve"><value>Save failed: {0}</value></data>
+  <data name="Contacts_SimDeleted" xml:space="preserve"><value>SIM contact deleted</value></data>
+  <data name="Contacts_SimDeleteFailed" xml:space="preserve"><value>Failed to delete SIM contact</value></data>
+  <data name="Contacts_ReadFailed" xml:space="preserve"><value>Failed to read contacts: {0}</value></data>
+  <data name="theme" xml:space="preserve"><value>Theme</value></data>
+  <data name="switchtheme" xml:space="preserve"><value>Switch light / dark mode</value></data>
+  <data name="language" xml:space="preserve"><value>Language</value></data>
+  <data name="reboot" xml:space="preserve"><value>Changing language restarts the app</value></data>
+  <data name="about" xml:space="preserve"><value>About</value></data>
+  <data name="light" xml:space="preserve"><value>Light</value></data>
+  <data name="dark" xml:space="preserve"><value>Dark</value></data>
+  <data name="report" xml:space="preserve"><value>Report a bug or give feedback</value></data>
+  <data name="github" xml:space="preserve"><value>View repository</value></data>
+  <data name="Toast_NewSms" xml:space="preserve"><value>New message</value></data>
+  <data name="Toast_Copied" xml:space="preserve"><value>Copied  {0}</value></data>
+  <data name="Toast_CodeCopied" xml:space="preserve"><value>Code copied  {0}</value></data>
+  <data name="Toast_CopyCode" xml:space="preserve"><value>Copy code {0}</value></data>
+  <data name="Sim_DecodeFailed" xml:space="preserve"><value>(cannot decode)</value></data>
+  <data name="Sim_ReadFailed" xml:space="preserve"><value>(read failed)</value></data>
+  <data name="Sim_NeedNumber" xml:space="preserve"><value>Please enter a number</value></data>
+  <data name="Sim_NoModem" xml:space="preserve"><value>Cannot connect to modem</value></data>
+  <data name="Sim_NoPhonebook" xml:space="preserve"><value>Cannot read SIM phonebook</value></data>
+  <data name="Sim_PhonebookFull" xml:space="preserve"><value>SIM phonebook is full</value></data>
+  <data name="Sim_TooLong" xml:space="preserve"><value>Name or number exceeds SIM capacity</value></data>
+  <data name="Sim_SavedToSim" xml:space="preserve"><value>Saved to SIM card</value></data>
+  <data name="Sim_WriteFailed" xml:space="preserve"><value>Failed to write to SIM</value></data>
+  <data name="Sim_Updated" xml:space="preserve"><value>SIM contact updated</value></data>
+  <data name="Sys_SendVia" xml:space="preserve"><value>System API SmsDevice2</value></data>
+  <data name="Sys_NoSmsDevice" xml:space="preserve"><value>No system SMS device found</value></data>
+  <data name="Sys_SentViaSystem" xml:space="preserve"><value>Sent (system API)</value></data>
+  <data name="Sys_SendFailed" xml:space="preserve"><value>System API send failed</value></data>
+  <data name="Switch_NoNic" xml:space="preserve"><value>No cellular adapter; auto-switch stopped</value></data>
+  <data name="Switch_Now5G" xml:space="preserve"><value>Auto: on 5G, will drop to LTE when idle</value></data>
+  <data name="Switch_NowLte" xml:space="preserve"><value>Auto: on LTE, will rise to 5G under load</value></data>
+  <data name="Switch_Up5G" xml:space="preserve"><value>Heavy traffic {0} Mbps → up to 5G</value></data>
+  <data name="Switch_DownLte" xml:space="preserve"><value>Idle → LTE (keep SMS)</value></data>
+  <data name="Backend_IntelName" xml:space="preserve"><value>Intel (AT/MBIM) — not implemented</value></data>
+  <data name="Backend_IntelTodo" xml:space="preserve"><value>Intel backend not implemented yet</value></data>
+  <data name="App_ErrorTitle" xml:space="preserve"><value>ExModem error</value></data>
+</root>

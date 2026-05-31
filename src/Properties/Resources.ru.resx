@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" /></xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" /></xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Common_Delete" xml:space="preserve"><value>Удалить</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Сохранить</value></data>
+  <data name="Common_Copy" xml:space="preserve"><value>Копировать</value></data>
+  <data name="Common_Send" xml:space="preserve"><value>Отправить</value></data>
+  <data name="Common_Phone" xml:space="preserve"><value>Телефон</value></data>
+  <data name="Common_SimCard" xml:space="preserve"><value>SIM-карта</value></data>
+  <data name="Common_Sim" xml:space="preserve"><value>SIM</value></data>
+  <data name="Common_Device" xml:space="preserve"><value>Устройство</value></data>
+  <data name="Common_Unknown" xml:space="preserve"><value>Неизвестно</value></data>
+  <data name="Common_LoadFailed" xml:space="preserve"><value>Ошибка чтения</value></data>
+  <data name="Nav_Network" xml:space="preserve"><value>Сеть</value></data>
+  <data name="Nav_Contacts" xml:space="preserve"><value>Контакты</value></data>
+  <data name="Chat" xml:space="preserve"><value>Сообщения</value></data>
+  <data name="ChatDesc" xml:space="preserve"><value>Приём и отправка SMS</value></data>
+  <data name="Settings" xml:space="preserve"><value>Настройки</value></data>
+  <data name="Tray_Show" xml:space="preserve"><value>Показать окно</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>Выход</value></data>
+  <data name="Status_BannerTitle" xml:space="preserve"><value>Лёгкое управление расширенными функциями модема</value></data>
+  <data name="Status_DeviceInfo" xml:space="preserve"><value>Сведения об устройстве</value></data>
+  <data name="Status_CurrentNetwork" xml:space="preserve"><value>Текущая сеть</value></data>
+  <data name="Status_Carrier" xml:space="preserve"><value>Оператор</value></data>
+  <data name="Status_RegState" xml:space="preserve"><value>Регистрация</value></data>
+  <data name="Status_SignalStrength" xml:space="preserve"><value>Уровень сигнала</value></data>
+  <data name="Status_SmsCenter" xml:space="preserve"><value>SMS-центр</value></data>
+  <data name="Status_Signal" xml:space="preserve"><value>Сигнал</value></data>
+  <data name="Status_Manufacturer" xml:space="preserve"><value>Производитель</value></data>
+  <data name="Status_Model" xml:space="preserve"><value>Модель</value></data>
+  <data name="Status_Firmware" xml:space="preserve"><value>Версия прошивки</value></data>
+  <data name="Status_BasicSettings" xml:space="preserve"><value>Основные настройки</value></data>
+  <data name="Status_DataSwitch" xml:space="preserve"><value>Передача данных</value></data>
+  <data name="Status_DataSwitchDesc" xml:space="preserve"><value>Доступ в интернет через моб. данные</value></data>
+  <data name="Status_NetworkMode" xml:space="preserve"><value>Режим сети</value></data>
+  <data name="Status_NetworkModeDesc" xml:space="preserve"><value>4G — SMS и базовый интернет; 5G — высокоскоростной интернет</value></data>
+  <data name="Status_AutoSwitch" xml:space="preserve"><value>Автопереключение сети</value></data>
+  <data name="Status_AutoSwitchDesc" xml:space="preserve"><value>4G в простое, 5G под нагрузкой</value></data>
+  <data name="Status_ModeLoading" xml:space="preserve"><value>Загрузка…</value></data>
+  <data name="Status_ModeHint5G" xml:space="preserve"><value>Режим: 5G · быстро (без SMS)</value></data>
+  <data name="Status_ModeHintLte" xml:space="preserve"><value>Режим: LTE · SMS доступны</value></data>
+  <data name="Status_DataEnabling" xml:space="preserve"><value>Включение моб. данных…</value></data>
+  <data name="Status_DataDisabling" xml:space="preserve"><value>Отключение моб. данных…</value></data>
+  <data name="Status_DataEnabled" xml:space="preserve"><value>✓ Моб. данные включены</value></data>
+  <data name="Status_DataDisabled" xml:space="preserve"><value>✓ Моб. данные выключены</value></data>
+  <data name="Status_SmsModeLte" xml:space="preserve"><value>Режим SMS (LTE)</value></data>
+  <data name="Status_Switching5G" xml:space="preserve"><value>Переход на 5G (через LTE)…</value></data>
+  <data name="Status_Switched5G" xml:space="preserve"><value>✓ Переключено на 5G</value></data>
+  <data name="Status_Switch5GFailed" xml:space="preserve"><value>✗ Не удалось перейти на 5G (проверьте модем)</value></data>
+  <data name="Status_SwitchingTo" xml:space="preserve"><value>Переход на {0}… (возможен кратковременный обрыв)</value></data>
+  <data name="Status_SwitchedTo" xml:space="preserve"><value>✓ Переключено на {0}</value></data>
+  <data name="Status_SwitchFailed" xml:space="preserve"><value>✗ Сбой переключения (проверьте модем)</value></data>
+  <data name="Status_AutoOn" xml:space="preserve"><value>Автопереключение вкл.: простой→LTE (SMS), нагрузка→5G</value></data>
+  <data name="Status_AutoOff" xml:space="preserve"><value>Автопереключение выкл.</value></data>
+  <data name="Status_CopyTitle" xml:space="preserve"><value>Состояние сети ExModem</value></data>
+  <data name="Status_Copied" xml:space="preserve"><value>✓ Все параметры скопированы</value></data>
+  <data name="Status_CopyFailed" xml:space="preserve"><value>Ошибка копирования</value></data>
+  <data name="Status_Copy_Adapter" xml:space="preserve"><value>Адаптер</value></data>
+  <data name="Status_Copy_DataClass" xml:space="preserve"><value>Текущая сеть (Data Class)</value></data>
+  <data name="Status_Copy_ModePref" xml:space="preserve"><value>Режим (mode_pref)</value></data>
+  <data name="Reg_NotRegistered" xml:space="preserve"><value>Не зарегистрирован</value></data>
+  <data name="Reg_Searching" xml:space="preserve"><value>Поиск…</value></data>
+  <data name="Reg_Home" xml:space="preserve"><value>Зарегистрирован</value></data>
+  <data name="Reg_Roaming" xml:space="preserve"><value>Роуминг</value></data>
+  <data name="Reg_Partner" xml:space="preserve"><value>Партнёрская сеть</value></data>
+  <data name="Reg_Denied" xml:space="preserve"><value>Регистрация отклонена</value></data>
+  <data name="Signal_None" xml:space="preserve"><value>Нет сигнала</value></data>
+  <data name="Carrier_ChinaMobile" xml:space="preserve"><value>China Mobile</value></data>
+  <data name="Carrier_ChinaUnicom" xml:space="preserve"><value>China Unicom</value></data>
+  <data name="Carrier_ChinaTelecom" xml:space="preserve"><value>China Telecom</value></data>
+  <data name="Carrier_ChinaBroadnet" xml:space="preserve"><value>China Broadnet</value></data>
+  <data name="Chat_NewConversation" xml:space="preserve"><value>Новый чат</value></data>
+  <data name="Chat_SearchPlaceholder" xml:space="preserve"><value>Поиск SMS / номера…</value></data>
+  <data name="Chat_DeleteConversation" xml:space="preserve"><value>Удалить чат</value></data>
+  <data name="Chat_CopyNumberTip" xml:space="preserve"><value>Нажмите, чтобы скопировать номер</value></data>
+  <data name="Chat_RecipientPlaceholder" xml:space="preserve"><value>Номер получателя…</value></data>
+  <data name="Chat_SaveAsContact" xml:space="preserve"><value>В контакты</value></data>
+  <data name="Chat_InputPlaceholder" xml:space="preserve"><value>Введите сообщение…</value></data>
+  <data name="Chat_Status_ConvoDeleted" xml:space="preserve"><value>Чат {0} удалён</value></data>
+  <data name="Chat_Status_NewConvo" xml:space="preserve"><value>Новый чат: введите номер сверху, текст снизу</value></data>
+  <data name="Chat_Status_NeedNumber" xml:space="preserve"><value>Укажите номер получателя</value></data>
+  <data name="Chat_Status_NeedText" xml:space="preserve"><value>Введите текст сообщения</value></data>
+  <data name="Chat_Toast_SendFailedLte" xml:space="preserve"><value>Не отправлено: {0} (SMS требует LTE)</value></data>
+  <data name="Chat_Toast_SendError" xml:space="preserve"><value>Ошибка отправки: {0}</value></data>
+  <data name="Chat_Status_SimDeleted" xml:space="preserve"><value>Удалено одно SMS с SIM</value></data>
+  <data name="Chat_Status_SimDeleteFailed" xml:space="preserve"><value>Не удалось удалить SMS с SIM</value></data>
+  <data name="Chat_Status_MsgDeleted" xml:space="preserve"><value>Сообщение удалено</value></data>
+  <data name="Chat_Status_Synced" xml:space="preserve"><value>Синхронизировано: {0} систем. + {1} SIM / {2} чатов</value></data>
+  <data name="Chat_Status_SyncFailed" xml:space="preserve"><value>✗ Не удалось прочитать хранилище SMS: {0}</value></data>
+  <data name="Chat_DeleteFailed" xml:space="preserve"><value>Ошибка удаления: {0}</value></data>
+  <data name="Msg_StatusFailed" xml:space="preserve"><value>Ошибка</value></data>
+  <data name="Msg_StatusSending" xml:space="preserve"><value>Отправка…</value></data>
+  <data name="Contacts_Title" xml:space="preserve"><value>Контакты</value></data>
+  <data name="Contacts_AddTip" xml:space="preserve"><value>Добавить контакт</value></data>
+  <data name="Contacts_SearchPlaceholder" xml:space="preserve"><value>Поиск имени или номера…</value></data>
+  <data name="Contacts_EmptyHint" xml:space="preserve"><value>Выберите контакт или нажмите +</value></data>
+  <data name="Contacts_Name" xml:space="preserve"><value>Имя</value></data>
+  <data name="Contacts_PhoneNumber" xml:space="preserve"><value>Номер телефона</value></data>
+  <data name="Contacts_SaveTo" xml:space="preserve"><value>Сохранить в</value></data>
+  <data name="Contacts_TitleAdd" xml:space="preserve"><value>Новый контакт</value></data>
+  <data name="Contacts_TitleEdit" xml:space="preserve"><value>Изменить контакт</value></data>
+  <data name="Contacts_SimSyncing" xml:space="preserve"><value>Синхронизация SIM…</value></data>
+  <data name="Contacts_CountText" xml:space="preserve"><value>Контактов: {0}</value></data>
+  <data name="Contacts_ChooseAvatar" xml:space="preserve"><value>Выбрать фото</value></data>
+  <data name="Contacts_ImageFilter" xml:space="preserve"><value>Изображения</value></data>
+  <data name="Contacts_NeedNumber" xml:space="preserve"><value>Укажите номер</value></data>
+  <data name="Contacts_Saved" xml:space="preserve"><value>Сохранено</value></data>
+  <data name="Contacts_SaveFailed" xml:space="preserve"><value>Ошибка сохранения: {0}</value></data>
+  <data name="Contacts_SimDeleted" xml:space="preserve"><value>Контакт SIM удалён</value></data>
+  <data name="Contacts_SimDeleteFailed" xml:space="preserve"><value>Не удалось удалить контакт SIM</value></data>
+  <data name="Contacts_ReadFailed" xml:space="preserve"><value>Не удалось прочитать контакты: {0}</value></data>
+  <data name="theme" xml:space="preserve"><value>Тема</value></data>
+  <data name="switchtheme" xml:space="preserve"><value>Светлая / тёмная тема</value></data>
+  <data name="language" xml:space="preserve"><value>Язык</value></data>
+  <data name="reboot" xml:space="preserve"><value>Смена языка перезапустит приложение</value></data>
+  <data name="about" xml:space="preserve"><value>О программе</value></data>
+  <data name="light" xml:space="preserve"><value>Светлая</value></data>
+  <data name="dark" xml:space="preserve"><value>Тёмная</value></data>
+  <data name="report" xml:space="preserve"><value>Сообщить об ошибке / отзыв</value></data>
+  <data name="github" xml:space="preserve"><value>Открыть репозиторий</value></data>
+  <data name="Toast_NewSms" xml:space="preserve"><value>Новое сообщение</value></data>
+  <data name="Toast_Copied" xml:space="preserve"><value>Скопировано  {0}</value></data>
+  <data name="Toast_CodeCopied" xml:space="preserve"><value>Код скопирован  {0}</value></data>
+  <data name="Toast_CopyCode" xml:space="preserve"><value>Скопировать код {0}</value></data>
+  <data name="Sim_DecodeFailed" xml:space="preserve"><value>(не удалось декодировать)</value></data>
+  <data name="Sim_ReadFailed" xml:space="preserve"><value>(ошибка чтения)</value></data>
+  <data name="Sim_NeedNumber" xml:space="preserve"><value>Укажите номер</value></data>
+  <data name="Sim_NoModem" xml:space="preserve"><value>Нет связи с модемом</value></data>
+  <data name="Sim_NoPhonebook" xml:space="preserve"><value>Не читается телефонная книга SIM</value></data>
+  <data name="Sim_PhonebookFull" xml:space="preserve"><value>Телефонная книга SIM заполнена</value></data>
+  <data name="Sim_TooLong" xml:space="preserve"><value>Имя или номер превышает ёмкость SIM</value></data>
+  <data name="Sim_SavedToSim" xml:space="preserve"><value>Сохранено на SIM</value></data>
+  <data name="Sim_WriteFailed" xml:space="preserve"><value>Не удалось записать на SIM</value></data>
+  <data name="Sim_Updated" xml:space="preserve"><value>Контакт SIM обновлён</value></data>
+  <data name="Sys_SendVia" xml:space="preserve"><value>Системный API SmsDevice2</value></data>
+  <data name="Sys_NoSmsDevice" xml:space="preserve"><value>Системное SMS-устройство не найдено</value></data>
+  <data name="Sys_SentViaSystem" xml:space="preserve"><value>Отправлено (системный API)</value></data>
+  <data name="Sys_SendFailed" xml:space="preserve"><value>Сбой отправки системным API</value></data>
+  <data name="Switch_NoNic" xml:space="preserve"><value>Нет сотового адаптера; автопереключение остановлено</value></data>
+  <data name="Switch_Now5G" xml:space="preserve"><value>Авто: 5G, при простое → LTE</value></data>
+  <data name="Switch_NowLte" xml:space="preserve"><value>Авто: LTE, под нагрузкой → 5G</value></data>
+  <data name="Switch_Up5G" xml:space="preserve"><value>Трафик {0} Мбит/с → 5G</value></data>
+  <data name="Switch_DownLte" xml:space="preserve"><value>Простой → LTE (SMS)</value></data>
+  <data name="Backend_IntelName" xml:space="preserve"><value>Intel (AT/MBIM) — не реализовано</value></data>
+  <data name="Backend_IntelTodo" xml:space="preserve"><value>Бэкенд Intel пока не реализован</value></data>
+  <data name="App_ErrorTitle" xml:space="preserve"><value>Ошибка ExModem</value></data>
+</root>

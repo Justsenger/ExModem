@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" /></xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" /></xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Common_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Common_Copy" xml:space="preserve"><value>复制</value></data>
+  <data name="Common_Send" xml:space="preserve"><value>发送</value></data>
+  <data name="Common_Phone" xml:space="preserve"><value>本机</value></data>
+  <data name="Common_SimCard" xml:space="preserve"><value>SIM 卡</value></data>
+  <data name="Common_Sim" xml:space="preserve"><value>SIM</value></data>
+  <data name="Common_Device" xml:space="preserve"><value>设备</value></data>
+  <data name="Common_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="Common_LoadFailed" xml:space="preserve"><value>读取失败</value></data>
+  <data name="Nav_Network" xml:space="preserve"><value>网络</value></data>
+  <data name="Nav_Contacts" xml:space="preserve"><value>联系人</value></data>
+  <data name="Chat" xml:space="preserve"><value>短信</value></data>
+  <data name="ChatDesc" xml:space="preserve"><value>收发短信</value></data>
+  <data name="Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Tray_Show" xml:space="preserve"><value>显示主界面</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>退出</value></data>
+  <data name="Status_BannerTitle" xml:space="preserve"><value>轻松玩转 Modem 高级功能</value></data>
+  <data name="Status_DeviceInfo" xml:space="preserve"><value>设备信息</value></data>
+  <data name="Status_CurrentNetwork" xml:space="preserve"><value>当前网络</value></data>
+  <data name="Status_Carrier" xml:space="preserve"><value>运营商</value></data>
+  <data name="Status_RegState" xml:space="preserve"><value>注册状态</value></data>
+  <data name="Status_SignalStrength" xml:space="preserve"><value>信号强度</value></data>
+  <data name="Status_SmsCenter" xml:space="preserve"><value>短信中心</value></data>
+  <data name="Status_Signal" xml:space="preserve"><value>信号</value></data>
+  <data name="Status_Manufacturer" xml:space="preserve"><value>制造商</value></data>
+  <data name="Status_Model" xml:space="preserve"><value>型号</value></data>
+  <data name="Status_Firmware" xml:space="preserve"><value>固件版本</value></data>
+  <data name="Status_BasicSettings" xml:space="preserve"><value>基本设定</value></data>
+  <data name="Status_DataSwitch" xml:space="preserve"><value>数据开关</value></data>
+  <data name="Status_DataSwitchDesc" xml:space="preserve"><value>允许通过数据流量访问互联网</value></data>
+  <data name="Status_NetworkMode" xml:space="preserve"><value>网络模式</value></data>
+  <data name="Status_NetworkModeDesc" xml:space="preserve"><value>4G 网络提供短信收发服务和基本上网服务，5G 网络提供高速上网服务</value></data>
+  <data name="Status_AutoSwitch" xml:space="preserve"><value>自动切换网络</value></data>
+  <data name="Status_AutoSwitchDesc" xml:space="preserve"><value>空闲时使用 4G 网络，负载时使用 5G 网络</value></data>
+  <data name="Status_ModeLoading" xml:space="preserve"><value>读取中…</value></data>
+  <data name="Status_ModeHint5G" xml:space="preserve"><value>当前模式：5G · 高速（收不到短信）</value></data>
+  <data name="Status_ModeHintLte" xml:space="preserve"><value>当前模式：LTE · 短信（可收发）</value></data>
+  <data name="Status_DataEnabling" xml:space="preserve"><value>正在开启蜂窝数据…</value></data>
+  <data name="Status_DataDisabling" xml:space="preserve"><value>正在关闭蜂窝数据…</value></data>
+  <data name="Status_DataEnabled" xml:space="preserve"><value>✓ 蜂窝数据已开启</value></data>
+  <data name="Status_DataDisabled" xml:space="preserve"><value>✓ 蜂窝数据已关闭</value></data>
+  <data name="Status_SmsModeLte" xml:space="preserve"><value>短信模式 (LTE)</value></data>
+  <data name="Status_Switching5G" xml:space="preserve"><value>切换到 5G（先驻 LTE 再开 5G，避免脱网）…</value></data>
+  <data name="Status_Switched5G" xml:space="preserve"><value>✓ 已切到 5G</value></data>
+  <data name="Status_Switch5GFailed" xml:space="preserve"><value>✗ 5G 切换失败（检查 modem）</value></data>
+  <data name="Status_SwitchingTo" xml:space="preserve"><value>切换到 {0}…（蜂窝可能短暂重连）</value></data>
+  <data name="Status_SwitchedTo" xml:space="preserve"><value>✓ 已切到 {0}</value></data>
+  <data name="Status_SwitchFailed" xml:space="preserve"><value>✗ 切换失败（检查 modem）</value></data>
+  <data name="Status_AutoOn" xml:space="preserve"><value>智能自动切换已开启：空闲→LTE（短信实时），大流量→5G（提速）</value></data>
+  <data name="Status_AutoOff" xml:space="preserve"><value>智能自动切换已关闭</value></data>
+  <data name="Status_CopyTitle" xml:space="preserve"><value>ExModem 蜂窝状态</value></data>
+  <data name="Status_Copied" xml:space="preserve"><value>✓ 已复制全部参数到剪贴板</value></data>
+  <data name="Status_CopyFailed" xml:space="preserve"><value>复制失败</value></data>
+  <data name="Status_Copy_Adapter" xml:space="preserve"><value>适配器</value></data>
+  <data name="Status_Copy_DataClass" xml:space="preserve"><value>当前网络 (Data Class)</value></data>
+  <data name="Status_Copy_ModePref" xml:space="preserve"><value>已设模式 (mode_pref)</value></data>
+  <data name="Reg_NotRegistered" xml:space="preserve"><value>未注册</value></data>
+  <data name="Reg_Searching" xml:space="preserve"><value>搜索中…</value></data>
+  <data name="Reg_Home" xml:space="preserve"><value>已注册</value></data>
+  <data name="Reg_Roaming" xml:space="preserve"><value>漫游中</value></data>
+  <data name="Reg_Partner" xml:space="preserve"><value>合作网络</value></data>
+  <data name="Reg_Denied" xml:space="preserve"><value>注册被拒</value></data>
+  <data name="Signal_None" xml:space="preserve"><value>无信号</value></data>
+  <data name="Carrier_ChinaMobile" xml:space="preserve"><value>中国移动</value></data>
+  <data name="Carrier_ChinaUnicom" xml:space="preserve"><value>中国联通</value></data>
+  <data name="Carrier_ChinaTelecom" xml:space="preserve"><value>中国电信</value></data>
+  <data name="Carrier_ChinaBroadnet" xml:space="preserve"><value>中国广电</value></data>
+  <data name="Chat_NewConversation" xml:space="preserve"><value>新建会话</value></data>
+  <data name="Chat_SearchPlaceholder" xml:space="preserve"><value>搜索短信 / 号码…</value></data>
+  <data name="Chat_DeleteConversation" xml:space="preserve"><value>删除会话</value></data>
+  <data name="Chat_CopyNumberTip" xml:space="preserve"><value>点击复制号码</value></data>
+  <data name="Chat_RecipientPlaceholder" xml:space="preserve"><value>收件人号码…</value></data>
+  <data name="Chat_SaveAsContact" xml:space="preserve"><value>存为联系人</value></data>
+  <data name="Chat_InputPlaceholder" xml:space="preserve"><value>输入内容…</value></data>
+  <data name="Chat_Status_ConvoDeleted" xml:space="preserve"><value>已删除会话 {0}</value></data>
+  <data name="Chat_Status_NewConvo" xml:space="preserve"><value>新建会话：上方填号码，下方输入内容发送</value></data>
+  <data name="Chat_Status_NeedNumber" xml:space="preserve"><value>请填写收件人号码</value></data>
+  <data name="Chat_Status_NeedText" xml:space="preserve"><value>请输入短信内容</value></data>
+  <data name="Chat_Toast_SendFailedLte" xml:space="preserve"><value>发送失败：{0}（短信需在 LTE）</value></data>
+  <data name="Chat_Toast_SendError" xml:space="preserve"><value>发送异常：{0}</value></data>
+  <data name="Chat_Status_SimDeleted" xml:space="preserve"><value>已删除 SIM 卡上的一条短信</value></data>
+  <data name="Chat_Status_SimDeleteFailed" xml:space="preserve"><value>删除 SIM 短信失败</value></data>
+  <data name="Chat_Status_MsgDeleted" xml:space="preserve"><value>已删除一条消息</value></data>
+  <data name="Chat_Status_Synced" xml:space="preserve"><value>已同步 {0} 条系统 + {1} 条 SIM / {2} 个会话</value></data>
+  <data name="Chat_Status_SyncFailed" xml:space="preserve"><value>✗ 读取系统短信库失败：{0}</value></data>
+  <data name="Chat_DeleteFailed" xml:space="preserve"><value>删除失败：{0}</value></data>
+  <data name="Msg_StatusFailed" xml:space="preserve"><value>发送失败</value></data>
+  <data name="Msg_StatusSending" xml:space="preserve"><value>发送中…</value></data>
+  <data name="Contacts_Title" xml:space="preserve"><value>联系人</value></data>
+  <data name="Contacts_AddTip" xml:space="preserve"><value>新增联系人</value></data>
+  <data name="Contacts_SearchPlaceholder" xml:space="preserve"><value>搜索姓名或号码…</value></data>
+  <data name="Contacts_EmptyHint" xml:space="preserve"><value>选择左侧联系人查看 / 编辑，或点 ＋ 新增</value></data>
+  <data name="Contacts_Name" xml:space="preserve"><value>姓名</value></data>
+  <data name="Contacts_PhoneNumber" xml:space="preserve"><value>电话号码</value></data>
+  <data name="Contacts_SaveTo" xml:space="preserve"><value>保存到</value></data>
+  <data name="Contacts_TitleAdd" xml:space="preserve"><value>新增联系人</value></data>
+  <data name="Contacts_TitleEdit" xml:space="preserve"><value>修改联系人</value></data>
+  <data name="Contacts_SimSyncing" xml:space="preserve"><value>SIM 同步中…</value></data>
+  <data name="Contacts_CountText" xml:space="preserve"><value>{0} 人</value></data>
+  <data name="Contacts_ChooseAvatar" xml:space="preserve"><value>选择头像</value></data>
+  <data name="Contacts_ImageFilter" xml:space="preserve"><value>图片</value></data>
+  <data name="Contacts_NeedNumber" xml:space="preserve"><value>请填写号码</value></data>
+  <data name="Contacts_Saved" xml:space="preserve"><value>已保存</value></data>
+  <data name="Contacts_SaveFailed" xml:space="preserve"><value>保存失败：{0}</value></data>
+  <data name="Contacts_SimDeleted" xml:space="preserve"><value>已删除 SIM 卡联系人</value></data>
+  <data name="Contacts_SimDeleteFailed" xml:space="preserve"><value>删除 SIM 联系人失败</value></data>
+  <data name="Contacts_ReadFailed" xml:space="preserve"><value>读取联系人失败：{0}</value></data>
+  <data name="theme" xml:space="preserve"><value>主题</value></data>
+  <data name="switchtheme" xml:space="preserve"><value>切换浅色 / 深色模式</value></data>
+  <data name="language" xml:space="preserve"><value>语言</value></data>
+  <data name="reboot" xml:space="preserve"><value>更改语言会重启应用程序</value></data>
+  <data name="about" xml:space="preserve"><value>关于</value></data>
+  <data name="light" xml:space="preserve"><value>明亮</value></data>
+  <data name="dark" xml:space="preserve"><value>黑暗</value></data>
+  <data name="report" xml:space="preserve"><value>报告错误或提交意见</value></data>
+  <data name="github" xml:space="preserve"><value>查看仓库</value></data>
+  <data name="Toast_NewSms" xml:space="preserve"><value>新短信</value></data>
+  <data name="Toast_Copied" xml:space="preserve"><value>已复制  {0}</value></data>
+  <data name="Toast_CodeCopied" xml:space="preserve"><value>已复制验证码  {0}</value></data>
+  <data name="Toast_CopyCode" xml:space="preserve"><value>复制验证码 {0}</value></data>
+  <data name="Sim_DecodeFailed" xml:space="preserve"><value>（无法解码）</value></data>
+  <data name="Sim_ReadFailed" xml:space="preserve"><value>（读取失败）</value></data>
+  <data name="Sim_NeedNumber" xml:space="preserve"><value>请填写号码</value></data>
+  <data name="Sim_NoModem" xml:space="preserve"><value>无法连接调制解调器</value></data>
+  <data name="Sim_NoPhonebook" xml:space="preserve"><value>读不到 SIM 电话簿</value></data>
+  <data name="Sim_PhonebookFull" xml:space="preserve"><value>SIM 电话簿已满</value></data>
+  <data name="Sim_TooLong" xml:space="preserve"><value>姓名或号码超出 SIM 容量</value></data>
+  <data name="Sim_SavedToSim" xml:space="preserve"><value>已保存到 SIM 卡</value></data>
+  <data name="Sim_WriteFailed" xml:space="preserve"><value>写入 SIM 失败</value></data>
+  <data name="Sim_Updated" xml:space="preserve"><value>已更新 SIM 卡联系人</value></data>
+  <data name="Sys_SendVia" xml:space="preserve"><value>系统接口 SmsDevice2</value></data>
+  <data name="Sys_NoSmsDevice" xml:space="preserve"><value>未找到系统 SMS 设备</value></data>
+  <data name="Sys_SentViaSystem" xml:space="preserve"><value>已发送（系统接口）</value></data>
+  <data name="Sys_SendFailed" xml:space="preserve"><value>系统接口发送失败</value></data>
+  <data name="Switch_NoNic" xml:space="preserve"><value>未找到蜂窝网卡，自动切换已停止</value></data>
+  <data name="Switch_Now5G" xml:space="preserve"><value>智能自动：当前在 5G，空闲将切 LTE</value></data>
+  <data name="Switch_NowLte" xml:space="preserve"><value>智能自动：当前在 LTE，大流量将升 5G</value></data>
+  <data name="Switch_Up5G" xml:space="preserve"><value>大流量 {0} Mbps → 升 5G</value></data>
+  <data name="Switch_DownLte" xml:space="preserve"><value>空闲 → 切 LTE（保短信）</value></data>
+  <data name="Backend_IntelName" xml:space="preserve"><value>Intel (AT/MBIM) — 未实现</value></data>
+  <data name="Backend_IntelTodo" xml:space="preserve"><value>Intel 后端暂未实现</value></data>
+  <data name="App_ErrorTitle" xml:space="preserve"><value>ExModem 错误</value></data>
+</root>

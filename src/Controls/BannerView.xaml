@@ -1,0 +1,74 @@
+<UserControl x:Class="ExModem.Controls.BannerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- ExModem 横幅:原生 WPF 矢量夜空 + 信号塔(1200x200,6:1) -->
+    <Canvas Width="1200" Height="200">
+        <Rectangle Width="1200" Height="200">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="#1B1F4E" />
+                    <GradientStop Offset="0.5" Color="#39305F" />
+                    <GradientStop Offset="1" Color="#4A3B6E" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!-- 月亮组(右移避开标题,稍微下移使辉光不出上边界) -->
+        <Canvas Canvas.Left="280" Canvas.Top="12">
+            <Ellipse Canvas.Left="177" Canvas.Top="0" Width="116" Height="116">
+                <Ellipse.Fill>
+                    <RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                        <GradientStop Offset="0" Color="#D9F0ECF8" />
+                        <GradientStop Offset="0.42" Color="#4DCBBFE6" />
+                        <GradientStop Offset="1" Color="#00CBBFE6" />
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Canvas.Left="206" Canvas.Top="29" Width="58" Height="58" Fill="#ECE8F6" />
+            <Ellipse Canvas.Left="222" Canvas.Top="45" Width="10" Height="10" Fill="#D8D0EC" Opacity="0.50" />
+            <Ellipse Canvas.Left="242.5" Canvas.Top="62.5" Width="7" Height="7" Fill="#D8D0EC" Opacity="0.45" />
+            <Ellipse Canvas.Left="237.5" Canvas.Top="43.5" Width="5" Height="5" Fill="#D8D0EC" Opacity="0.40" />
+        </Canvas>
+
+        <!-- 繁星 -->
+        <Ellipse Canvas.Left="429" Canvas.Top="39" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.60" />
+        <Ellipse Canvas.Left="518.4" Canvas.Top="24.4" Width="3.2" Height="3.2" Fill="#FFFFFF" Opacity="0.90" />
+        <Ellipse Canvas.Left="599" Canvas.Top="47" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.55" />
+        <Ellipse Canvas.Left="678.4" Canvas.Top="20.4" Width="3.2" Height="3.2" Fill="#FFFFFF" Opacity="0.90" />
+        <Ellipse Canvas.Left="759" Canvas.Top="39" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.60" />
+        <Ellipse Canvas.Left="898.5" Canvas.Top="26.5" Width="3" Height="3" Fill="#FFFFFF" Opacity="0.85" />
+        <Ellipse Canvas.Left="999" Canvas.Top="45" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.55" />
+        <Ellipse Canvas.Left="1078.8" Canvas.Top="24.8" Width="2.4" Height="2.4" Fill="#FFFFFF" Opacity="0.75" />
+        <Ellipse Canvas.Left="1149" Canvas.Top="39" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.60" />
+        <Ellipse Canvas.Left="379" Canvas.Top="59" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.50" />
+        <Ellipse Canvas.Left="699" Canvas.Top="59" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.50" />
+        <Ellipse Canvas.Left="1119" Canvas.Top="61" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.50" />
+        <Ellipse Canvas.Left="959" Canvas.Top="15" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.60" />
+        <Ellipse Canvas.Left="538.8" Canvas.Top="12.8" Width="2.4" Height="2.4" Fill="#FFFFFF" Opacity="0.70" />
+        <Ellipse Canvas.Left="819" Canvas.Top="15" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.55" />
+        <Ellipse Canvas.Left="1039" Canvas.Top="61" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.50" />
+        <Ellipse Canvas.Left="639" Canvas.Top="65" Width="2" Height="2" Fill="#FFFFFF" Opacity="0.45" />
+
+        <!-- 分层夜山 -->
+        <Polygon Fill="#463A72" Points="0,200 0,86 180,76 400,90 620,74 840,86 1060,76 1200,84 1200,200" />
+        <Polygon Fill="#372E5E" Points="0,200 0,104 220,94 460,108 700,92 940,106 1160,96 1200,100 1200,200" />
+        <Polygon Fill="#281F4D" Points="0,200 0,124 200,116 420,128 660,114 880,124 1100,116 1200,122 1200,200" />
+        <Polygon Fill="#1B1736" Points="0,200 0,150 300,144 600,152 900,146 1200,150 1200,200" />
+
+        <!-- 信号塔组(右移;减一层变矮,底座落在山脊 y=150,圆弧降到 y=88 远离顶边) -->
+        <Canvas Canvas.Left="150" Canvas.Top="0">
+            <Ellipse Canvas.Left="776" Canvas.Top="141" Width="148" Height="18" Fill="#6B5896" Opacity="0.45" />
+            <Line X1="843" Y1="150" X2="849" Y2="90" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+            <Line X1="857" Y1="150" X2="851" Y2="90" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+            <Line X1="844" Y1="134" X2="856" Y2="134" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+            <Line X1="845" Y1="118" X2="855" Y2="118" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+            <Line X1="846" Y1="102" X2="854" Y2="102" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+            <Polyline Points="843,150 856,134 844,118 855,102 850,90" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeLineJoin="Round" />
+            <Line X1="850" Y1="90" X2="850" Y2="80" Stroke="#DCCFEF" StrokeThickness="1.4" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+            <Path Data="M836,88 A14,14 0 0 1 864,88" Stroke="#FFFFFF" StrokeThickness="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="0.60" />
+            <Path Data="M827,88 A23,23 0 0 1 873,88" Stroke="#FFFFFF" StrokeThickness="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="0.40" />
+            <Path Data="M817,88 A33,33 0 0 1 883,88" Stroke="#FFFFFF" StrokeThickness="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="0.24" />
+            <Ellipse Canvas.Left="847.6" Canvas.Top="83.6" Width="4.8" Height="4.8" Fill="#FFFFFF" Opacity="0.90" />
+        </Canvas>
+    </Canvas>
+</UserControl>

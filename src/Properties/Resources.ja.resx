@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" /></xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence><xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" /></xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Common_Delete" xml:space="preserve"><value>削除</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Common_Copy" xml:space="preserve"><value>コピー</value></data>
+  <data name="Common_Send" xml:space="preserve"><value>送信</value></data>
+  <data name="Common_Phone" xml:space="preserve"><value>本体</value></data>
+  <data name="Common_SimCard" xml:space="preserve"><value>SIM カード</value></data>
+  <data name="Common_Sim" xml:space="preserve"><value>SIM</value></data>
+  <data name="Common_Device" xml:space="preserve"><value>デバイス</value></data>
+  <data name="Common_Unknown" xml:space="preserve"><value>不明</value></data>
+  <data name="Common_LoadFailed" xml:space="preserve"><value>読み取り失敗</value></data>
+  <data name="Nav_Network" xml:space="preserve"><value>ネットワーク</value></data>
+  <data name="Nav_Contacts" xml:space="preserve"><value>連絡先</value></data>
+  <data name="Chat" xml:space="preserve"><value>メッセージ</value></data>
+  <data name="ChatDesc" xml:space="preserve"><value>SMS の送受信</value></data>
+  <data name="Settings" xml:space="preserve"><value>設定</value></data>
+  <data name="Tray_Show" xml:space="preserve"><value>メイン画面を表示</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>終了</value></data>
+  <data name="Status_BannerTitle" xml:space="preserve"><value>モデムの高度な機能を手軽に</value></data>
+  <data name="Status_DeviceInfo" xml:space="preserve"><value>デバイス情報</value></data>
+  <data name="Status_CurrentNetwork" xml:space="preserve"><value>現在のネットワーク</value></data>
+  <data name="Status_Carrier" xml:space="preserve"><value>通信事業者</value></data>
+  <data name="Status_RegState" xml:space="preserve"><value>登録状態</value></data>
+  <data name="Status_SignalStrength" xml:space="preserve"><value>電波強度</value></data>
+  <data name="Status_SmsCenter" xml:space="preserve"><value>SMS センター</value></data>
+  <data name="Status_Signal" xml:space="preserve"><value>電波</value></data>
+  <data name="Status_Manufacturer" xml:space="preserve"><value>製造元</value></data>
+  <data name="Status_Model" xml:space="preserve"><value>モデル</value></data>
+  <data name="Status_Firmware" xml:space="preserve"><value>ファームウェアバージョン</value></data>
+  <data name="Status_BasicSettings" xml:space="preserve"><value>基本設定</value></data>
+  <data name="Status_DataSwitch" xml:space="preserve"><value>データ通信</value></data>
+  <data name="Status_DataSwitchDesc" xml:space="preserve"><value>モバイルデータでのインターネット接続を許可</value></data>
+  <data name="Status_NetworkMode" xml:space="preserve"><value>ネットワークモード</value></data>
+  <data name="Status_NetworkModeDesc" xml:space="preserve"><value>4G は SMS と基本通信、5G は高速通信を提供</value></data>
+  <data name="Status_AutoSwitch" xml:space="preserve"><value>ネットワーク自動切替</value></data>
+  <data name="Status_AutoSwitchDesc" xml:space="preserve"><value>待機時は 4G、高負荷時は 5G</value></data>
+  <data name="Status_ModeLoading" xml:space="preserve"><value>読み込み中…</value></data>
+  <data name="Status_ModeHint5G" xml:space="preserve"><value>現在：5G・高速（SMS 不可）</value></data>
+  <data name="Status_ModeHintLte" xml:space="preserve"><value>現在：LTE・SMS 可</value></data>
+  <data name="Status_DataEnabling" xml:space="preserve"><value>モバイルデータを有効化中…</value></data>
+  <data name="Status_DataDisabling" xml:space="preserve"><value>モバイルデータを無効化中…</value></data>
+  <data name="Status_DataEnabled" xml:space="preserve"><value>✓ モバイルデータ オン</value></data>
+  <data name="Status_DataDisabled" xml:space="preserve"><value>✓ モバイルデータ オフ</value></data>
+  <data name="Status_SmsModeLte" xml:space="preserve"><value>SMS モード (LTE)</value></data>
+  <data name="Status_Switching5G" xml:space="preserve"><value>5G に切替中（LTE 経由で切断回避）…</value></data>
+  <data name="Status_Switched5G" xml:space="preserve"><value>✓ 5G に切替完了</value></data>
+  <data name="Status_Switch5GFailed" xml:space="preserve"><value>✗ 5G 切替失敗（モデム確認）</value></data>
+  <data name="Status_SwitchingTo" xml:space="preserve"><value>{0} に切替中…（一時的に再接続の場合あり）</value></data>
+  <data name="Status_SwitchedTo" xml:space="preserve"><value>✓ {0} に切替完了</value></data>
+  <data name="Status_SwitchFailed" xml:space="preserve"><value>✗ 切替失敗（モデム確認）</value></data>
+  <data name="Status_AutoOn" xml:space="preserve"><value>自動切替 オン：待機→LTE（SMS）、高負荷→5G</value></data>
+  <data name="Status_AutoOff" xml:space="preserve"><value>自動切替 オフ</value></data>
+  <data name="Status_CopyTitle" xml:space="preserve"><value>ExModem セルラー状態</value></data>
+  <data name="Status_Copied" xml:space="preserve"><value>✓ 全パラメータをコピーしました</value></data>
+  <data name="Status_CopyFailed" xml:space="preserve"><value>コピー失敗</value></data>
+  <data name="Status_Copy_Adapter" xml:space="preserve"><value>アダプター</value></data>
+  <data name="Status_Copy_DataClass" xml:space="preserve"><value>現在のネットワーク (Data Class)</value></data>
+  <data name="Status_Copy_ModePref" xml:space="preserve"><value>設定モード (mode_pref)</value></data>
+  <data name="Reg_NotRegistered" xml:space="preserve"><value>未登録</value></data>
+  <data name="Reg_Searching" xml:space="preserve"><value>検索中…</value></data>
+  <data name="Reg_Home" xml:space="preserve"><value>登録済み</value></data>
+  <data name="Reg_Roaming" xml:space="preserve"><value>ローミング</value></data>
+  <data name="Reg_Partner" xml:space="preserve"><value>提携ネットワーク</value></data>
+  <data name="Reg_Denied" xml:space="preserve"><value>登録拒否</value></data>
+  <data name="Signal_None" xml:space="preserve"><value>圏外</value></data>
+  <data name="Carrier_ChinaMobile" xml:space="preserve"><value>China Mobile</value></data>
+  <data name="Carrier_ChinaUnicom" xml:space="preserve"><value>China Unicom</value></data>
+  <data name="Carrier_ChinaTelecom" xml:space="preserve"><value>China Telecom</value></data>
+  <data name="Carrier_ChinaBroadnet" xml:space="preserve"><value>China Broadnet</value></data>
+  <data name="Chat_NewConversation" xml:space="preserve"><value>新規メッセージ</value></data>
+  <data name="Chat_SearchPlaceholder" xml:space="preserve"><value>SMS / 番号を検索…</value></data>
+  <data name="Chat_DeleteConversation" xml:space="preserve"><value>会話を削除</value></data>
+  <data name="Chat_CopyNumberTip" xml:space="preserve"><value>タップで番号をコピー</value></data>
+  <data name="Chat_RecipientPlaceholder" xml:space="preserve"><value>宛先番号…</value></data>
+  <data name="Chat_SaveAsContact" xml:space="preserve"><value>連絡先に保存</value></data>
+  <data name="Chat_InputPlaceholder" xml:space="preserve"><value>メッセージを入力…</value></data>
+  <data name="Chat_Status_ConvoDeleted" xml:space="preserve"><value>会話 {0} を削除しました</value></data>
+  <data name="Chat_Status_NewConvo" xml:space="preserve"><value>新規：上に番号、下に本文を入力して送信</value></data>
+  <data name="Chat_Status_NeedNumber" xml:space="preserve"><value>宛先番号を入力してください</value></data>
+  <data name="Chat_Status_NeedText" xml:space="preserve"><value>本文を入力してください</value></data>
+  <data name="Chat_Toast_SendFailedLte" xml:space="preserve"><value>送信失敗：{0}（SMS は LTE が必要）</value></data>
+  <data name="Chat_Toast_SendError" xml:space="preserve"><value>送信エラー：{0}</value></data>
+  <data name="Chat_Status_SimDeleted" xml:space="preserve"><value>SIM の SMS を 1 件削除</value></data>
+  <data name="Chat_Status_SimDeleteFailed" xml:space="preserve"><value>SIM の SMS 削除に失敗</value></data>
+  <data name="Chat_Status_MsgDeleted" xml:space="preserve"><value>メッセージを削除しました</value></data>
+  <data name="Chat_Status_Synced" xml:space="preserve"><value>同期：システム {0} 件 + SIM {1} 件 / 会話 {2} 件</value></data>
+  <data name="Chat_Status_SyncFailed" xml:space="preserve"><value>✗ システム SMS 読み取り失敗：{0}</value></data>
+  <data name="Chat_DeleteFailed" xml:space="preserve"><value>削除失敗：{0}</value></data>
+  <data name="Msg_StatusFailed" xml:space="preserve"><value>送信失敗</value></data>
+  <data name="Msg_StatusSending" xml:space="preserve"><value>送信中…</value></data>
+  <data name="Contacts_Title" xml:space="preserve"><value>連絡先</value></data>
+  <data name="Contacts_AddTip" xml:space="preserve"><value>連絡先を追加</value></data>
+  <data name="Contacts_SearchPlaceholder" xml:space="preserve"><value>名前か番号を検索…</value></data>
+  <data name="Contacts_EmptyHint" xml:space="preserve"><value>左の連絡先を選択、または ＋ で追加</value></data>
+  <data name="Contacts_Name" xml:space="preserve"><value>名前</value></data>
+  <data name="Contacts_PhoneNumber" xml:space="preserve"><value>電話番号</value></data>
+  <data name="Contacts_SaveTo" xml:space="preserve"><value>保存先</value></data>
+  <data name="Contacts_TitleAdd" xml:space="preserve"><value>連絡先を追加</value></data>
+  <data name="Contacts_TitleEdit" xml:space="preserve"><value>連絡先を編集</value></data>
+  <data name="Contacts_SimSyncing" xml:space="preserve"><value>SIM 同期中…</value></data>
+  <data name="Contacts_CountText" xml:space="preserve"><value>{0} 件</value></data>
+  <data name="Contacts_ChooseAvatar" xml:space="preserve"><value>アイコンを選択</value></data>
+  <data name="Contacts_ImageFilter" xml:space="preserve"><value>画像</value></data>
+  <data name="Contacts_NeedNumber" xml:space="preserve"><value>番号を入力してください</value></data>
+  <data name="Contacts_Saved" xml:space="preserve"><value>保存しました</value></data>
+  <data name="Contacts_SaveFailed" xml:space="preserve"><value>保存失敗：{0}</value></data>
+  <data name="Contacts_SimDeleted" xml:space="preserve"><value>SIM の連絡先を削除</value></data>
+  <data name="Contacts_SimDeleteFailed" xml:space="preserve"><value>SIM 連絡先の削除に失敗</value></data>
+  <data name="Contacts_ReadFailed" xml:space="preserve"><value>連絡先の読み取り失敗：{0}</value></data>
+  <data name="theme" xml:space="preserve"><value>テーマ</value></data>
+  <data name="switchtheme" xml:space="preserve"><value>ライト / ダーク切替</value></data>
+  <data name="language" xml:space="preserve"><value>言語</value></data>
+  <data name="reboot" xml:space="preserve"><value>言語変更でアプリが再起動します</value></data>
+  <data name="about" xml:space="preserve"><value>バージョン情報</value></data>
+  <data name="light" xml:space="preserve"><value>ライト</value></data>
+  <data name="dark" xml:space="preserve"><value>ダーク</value></data>
+  <data name="report" xml:space="preserve"><value>バグ報告・フィードバック</value></data>
+  <data name="github" xml:space="preserve"><value>リポジトリを表示</value></data>
+  <data name="Toast_NewSms" xml:space="preserve"><value>新着メッセージ</value></data>
+  <data name="Toast_Copied" xml:space="preserve"><value>コピーしました  {0}</value></data>
+  <data name="Toast_CodeCopied" xml:space="preserve"><value>認証コードをコピー  {0}</value></data>
+  <data name="Toast_CopyCode" xml:space="preserve"><value>コード {0} をコピー</value></data>
+  <data name="Sim_DecodeFailed" xml:space="preserve"><value>（デコード不可）</value></data>
+  <data name="Sim_ReadFailed" xml:space="preserve"><value>（読み取り失敗）</value></data>
+  <data name="Sim_NeedNumber" xml:space="preserve"><value>番号を入力してください</value></data>
+  <data name="Sim_NoModem" xml:space="preserve"><value>モデムに接続できません</value></data>
+  <data name="Sim_NoPhonebook" xml:space="preserve"><value>SIM 電話帳を読めません</value></data>
+  <data name="Sim_PhonebookFull" xml:space="preserve"><value>SIM 電話帳が満杯です</value></data>
+  <data name="Sim_TooLong" xml:space="preserve"><value>名前か番号が SIM 容量超過</value></data>
+  <data name="Sim_SavedToSim" xml:space="preserve"><value>SIM カードに保存</value></data>
+  <data name="Sim_WriteFailed" xml:space="preserve"><value>SIM への書き込み失敗</value></data>
+  <data name="Sim_Updated" xml:space="preserve"><value>SIM 連絡先を更新</value></data>
+  <data name="Sys_SendVia" xml:space="preserve"><value>システム API SmsDevice2</value></data>
+  <data name="Sys_NoSmsDevice" xml:space="preserve"><value>システム SMS デバイスが見つかりません</value></data>
+  <data name="Sys_SentViaSystem" xml:space="preserve"><value>送信済み（システム API）</value></data>
+  <data name="Sys_SendFailed" xml:space="preserve"><value>システム API 送信失敗</value></data>
+  <data name="Switch_NoNic" xml:space="preserve"><value>セルラーアダプターなし、自動切替停止</value></data>
+  <data name="Switch_Now5G" xml:space="preserve"><value>自動：現在 5G、待機で LTE へ</value></data>
+  <data name="Switch_NowLte" xml:space="preserve"><value>自動：現在 LTE、高負荷で 5G へ</value></data>
+  <data name="Switch_Up5G" xml:space="preserve"><value>高トラフィック {0} Mbps → 5G</value></data>
+  <data name="Switch_DownLte" xml:space="preserve"><value>待機 → LTE（SMS 維持）</value></data>
+  <data name="Backend_IntelName" xml:space="preserve"><value>Intel (AT/MBIM) — 未実装</value></data>
+  <data name="Backend_IntelTodo" xml:space="preserve"><value>Intel バックエンドは未実装</value></data>
+  <data name="App_ErrorTitle" xml:space="preserve"><value>ExModem エラー</value></data>
+</root>

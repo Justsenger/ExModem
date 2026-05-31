@@ -1,0 +1,20 @@
+<Window x:Class="ExModem.Views.TrayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tray="clr-namespace:Wpf.Ui.Tray.Controls;assembly=Wpf.Ui.Tray"
+        xmlns:p="clr-namespace:ExModem.Properties"
+        Title="ExModemTray" Width="1" Height="1" Left="-4000" Top="-4000"
+        WindowStyle="None" ShowInTaskbar="False" ShowActivated="False"
+        AllowsTransparency="True" Background="Transparent" Opacity="0">
+    <tray:NotifyIcon x:Name="Tray" TooltipText="ExModem" MenuOnRightClick="True"
+                     Icon="pack://application:,,,/Assets/Icon.ico"
+                     LeftDoubleClick="Tray_DoubleClick">
+        <tray:NotifyIcon.Menu>
+            <ContextMenu>
+                <MenuItem Header="{x:Static p:Resources.Tray_Show}" Click="Show_Click" />
+                <Separator />
+                <MenuItem Header="{x:Static p:Resources.Tray_Exit}" Click="Exit_Click" />
+            </ContextMenu>
+        </tray:NotifyIcon.Menu>
+    </tray:NotifyIcon>
+</Window>

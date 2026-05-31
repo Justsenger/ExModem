@@ -1,0 +1,36 @@
+# ===== .NET 构建产物 =====
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+
+# ===== Visual Studio / IDE =====
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ===== WPF 编译临时工程(自动生成,勿提交) =====
+*_wpftmp.csproj
+*_wpftmp.*
+
+# ===== 备份 / 临时文件 =====
+*.bak
+*.tmp
+*~
+
+# ===== 运行时生成(每台机器/每次运行各异,不入库) =====
+config.xml
+
+# ===== 打包压缩产物 =====
+*.7z
+*.zip
+
+# ===== 开发辅助脚本(字体裁剪 / i18n 生成 / 探针等,不随发布上传) =====
+ExModem辅助工具/
+
+# ===== 保留(显式说明,这些必须入库,勿被上面规则误伤)=====
+# src/dll/        —— 字体裁剪/重编后的 Wpf.Ui.dll、Wpf.Ui.Tray.dll,构建时覆盖 NuGet 版,必需
+# docs/           —— 各语言 README、i18n 对照表
+# src/Assets/     —— 图标、已裁剪字体(*.bak 原始字体被忽略,不影响构建)
+!src/dll/

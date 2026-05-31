@@ -1,0 +1,210 @@
+<Page
+    x:Class="ExModem.Views.Pages.StatusPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:ctrl="clr-namespace:ExModem.Controls"
+    xmlns:tools="clr-namespace:ExModem.Tools"
+    xmlns:vm="clr-namespace:ExModem.ViewModels"
+    xmlns:p="clr-namespace:ExModem.Properties"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=vm:StatusViewModel, IsDesignTimeCreatable=True}"
+    Title="StatusPage"
+    d:DesignHeight="800"
+    d:DesignWidth="1000">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="15">
+
+            <!-- Banner(背景在代码里一次性渲染成位图,避免 VisualBrush 持续重绘)。间距复刻 ExHyperV MainPage -->
+            <Border x:Name="BannerBorder" Height="140" CornerRadius="15" Margin="0,0,0,10" Background="#23203A">
+                <Grid>
+                    <StackPanel VerticalAlignment="Center" Margin="30,5,0,0">
+                        <TextBlock Text="ExModem" FontSize="42" Foreground="White"
+                                   FontFamily="pack://application:,,,/Assets/#Audiowide" Margin="0,0,0,-4" />
+                        <TextBlock Text="{x:Static p:Resources.Status_BannerTitle}"
+                                   FontSize="18" Foreground="#CCFFFFFF" Margin="5,2,0,0" />
+                    </StackPanel>
+                    <TextBlock Text="{x:Static tools:Utils.VersionDisplay}" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                               Margin="0,0,25,15" Foreground="#99FFFFFF" FontSize="14" FontWeight="SemiBold" />
+                </Grid>
+            </Border>
+
+            <!-- 设备信息(完全复刻 ExHyperV MainPage 系统信息卡格式:头图标24+标题18,Grid 缩进38、标签列宽100、行高35、字号16) -->
+            <ui:CardControl Margin="0,0,0,10" VerticalAlignment="Top">
+                <ui:CardControl.Header>
+                    <StackPanel Margin="5">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                            <ui:FontIcon FontFamily="{DynamicResource SegoeFluentIcons}" Glyph="&#xE8EA;" FontSize="24" Margin="0,0,12,0" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                            <TextBlock Text="{x:Static p:Resources.Status_DeviceInfo}" FontSize="18" VerticalAlignment="Center" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                        </StackPanel>
+
+                        <Grid Margin="38,0,0,0">
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontSize" Value="16" />
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                    <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+                                </Style>
+                                <Style TargetType="TextBox" BasedOn="{StaticResource ReadOnlyText}">
+                                    <Setter Property="FontSize" Value="16" />
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                    <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                            </Grid.RowDefinitions>
+
+                            <!-- 左列:网络/信号状态 -->
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static p:Resources.Status_CurrentNetwork}" />
+                            <TextBox  Grid.Row="0" Grid.Column="1" Text="{Binding DataClass, Mode=OneWay}" />
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{x:Static p:Resources.Status_Carrier}" />
+                            <TextBox  Grid.Row="1" Grid.Column="1" Text="{Binding Provider, Mode=OneWay}" />
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="{x:Static p:Resources.Status_RegState}" />
+                            <TextBox  Grid.Row="2" Grid.Column="1" Text="{Binding RegisterState, Mode=OneWay}" />
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="{x:Static p:Resources.Status_SignalStrength}" />
+                            <TextBox  Grid.Row="3" Grid.Column="1" Text="{Binding Rssi, Mode=OneWay}" />
+                            <TextBlock Grid.Row="4" Grid.Column="0" Text="{x:Static p:Resources.Status_SmsCenter}" />
+                            <TextBox  Grid.Row="4" Grid.Column="1" Text="{Binding Smsc, Mode=OneWay}" />
+                            <TextBlock Grid.Row="5" Grid.Column="0" Text="{x:Static p:Resources.Status_Signal}" />
+                            <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                <Rectangle Width="4" Height="6"  VerticalAlignment="Bottom" Margin="0,0,2,3" Fill="{Binding SignalLevel, Converter={StaticResource SignalBar}, ConverterParameter=1}" />
+                                <Rectangle Width="4" Height="10" VerticalAlignment="Bottom" Margin="0,0,2,3" Fill="{Binding SignalLevel, Converter={StaticResource SignalBar}, ConverterParameter=2}" />
+                                <Rectangle Width="4" Height="14" VerticalAlignment="Bottom" Margin="0,0,2,3" Fill="{Binding SignalLevel, Converter={StaticResource SignalBar}, ConverterParameter=3}" />
+                                <Rectangle Width="4" Height="18" VerticalAlignment="Bottom" Margin="0,0,8,3" Fill="{Binding SignalLevel, Converter={StaticResource SignalBar}, ConverterParameter=4}" />
+                                <TextBlock VerticalAlignment="Center" Text="{Binding SignalPercent}" />
+                            </StackPanel>
+
+                            <!-- 右列:设备/SIM 标识 -->
+                            <TextBlock Grid.Row="0" Grid.Column="3" Text="{x:Static p:Resources.Status_Manufacturer}" />
+                            <TextBox  Grid.Row="0" Grid.Column="4" Text="{Binding Manufacturer, Mode=OneWay}" />
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{x:Static p:Resources.Status_Model}" />
+                            <TextBox  Grid.Row="1" Grid.Column="4" Text="{Binding Model, Mode=OneWay}" />
+                            <TextBlock Grid.Row="2" Grid.Column="3" Text="IMEI" />
+                            <TextBox  Grid.Row="2" Grid.Column="4" Text="{Binding Imei, Mode=OneWay}" />
+                            <TextBlock Grid.Row="3" Grid.Column="3" Text="IMSI" />
+                            <TextBox  Grid.Row="3" Grid.Column="4" Text="{Binding Imsi, Mode=OneWay}" />
+                            <TextBlock Grid.Row="4" Grid.Column="3" Text="ICCID" />
+                            <TextBox  Grid.Row="4" Grid.Column="4" Text="{Binding Iccid, Mode=OneWay}" />
+                            <TextBlock Grid.Row="5" Grid.Column="3" Text="{x:Static p:Resources.Status_Firmware}" />
+                            <TextBox  Grid.Row="5" Grid.Column="4" Text="{Binding Firmware, Mode=OneWay}" />
+                        </Grid>
+                    </StackPanel>
+                </ui:CardControl.Header>
+            </ui:CardControl>
+
+            <!-- 参数设定(底部) -->
+            <ui:TextBlock Margin="2,4,0,8" FontSize="16"
+                          Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static p:Resources.Status_BasicSettings}" />
+
+            <!-- 蜂窝数据开关(netsh dataenablement;只关数据,射频/短信不受影响) -->
+            <ui:CardControl Margin="0,0,0,10" Padding="16,14">
+                <ui:CardControl.Icon>
+                    <ui:FontIcon FontSize="24" FontFamily="{DynamicResource SegoeFluentIcons}" Glyph="&#xE839;" />
+                </ui:CardControl.Icon>
+                <ui:CardControl.Header>
+                    <StackPanel>
+                        <TextBlock FontSize="16" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static p:Resources.Status_DataSwitch}" />
+                        <TextBlock FontSize="13" Margin="0,4,0,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                                   Text="{x:Static p:Resources.Status_DataSwitchDesc}" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="{Binding DataEnabled, Mode=TwoWay}" />
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,10" Padding="16,14">
+                <ui:CardControl.Icon>
+                    <ui:FontIcon FontSize="24" FontFamily="{DynamicResource SegoeFluentIcons}" Glyph="&#xE774;" />
+                </ui:CardControl.Icon>
+                <ui:CardControl.Header>
+                    <StackPanel>
+                        <TextBlock FontSize="16" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static p:Resources.Status_NetworkMode}" />
+                        <TextBlock FontSize="13" Margin="0,4,0,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                                   Text="{x:Static p:Resources.Status_NetworkModeDesc}" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <!-- 滑动分段开关:凹槽 + 动画滑块 -->
+                <Border Width="134" Height="34" CornerRadius="8" BorderThickness="1"
+                        Background="{DynamicResource ControlFillColorDefaultBrush}"
+                        BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}"
+                        IsEnabled="{Binding Busy, Converter={StaticResource InverseBool}}">
+                    <Grid>
+                        <!-- 滑块(随 IsOn5G 在两段间滑动) -->
+                        <Border Width="63" Height="28" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                Margin="3,0,0,0" CornerRadius="6" Background="#4CA0FF">
+                            <Border.RenderTransform>
+                                <TranslateTransform X="0" />
+                            </Border.RenderTransform>
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsOn5G}" Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" To="63" Duration="0:0:0.18">
+                                                            <DoubleAnimation.EasingFunction>
+                                                                <CubicEase EasingMode="EaseOut" />
+                                                            </DoubleAnimation.EasingFunction>
+                                                        </DoubleAnimation>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" To="0" Duration="0:0:0.18">
+                                                            <DoubleAnimation.EasingFunction>
+                                                                <CubicEase EasingMode="EaseOut" />
+                                                            </DoubleAnimation.EasingFunction>
+                                                        </DoubleAnimation>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
+                        <!-- 点击层 + 文字(透明,露出滑块) -->
+                        <UniformGrid Columns="2">
+                            <Button Style="{StaticResource SegButton}" Content="4G" Command="{Binding LockLteCommand}"
+                                    Foreground="{Binding IsOn4G, Converter={StaticResource BadgeBrush}, ConverterParameter=fg}" />
+                            <Button Style="{StaticResource SegButton}" Content="5G" Command="{Binding Fast5GCommand}"
+                                    Foreground="{Binding IsOn5G, Converter={StaticResource BadgeBrush}, ConverterParameter=fg}" />
+                        </UniformGrid>
+                    </Grid>
+                </Border>
+            </ui:CardControl>
+
+            <ui:CardControl Margin="0,0,0,10" Padding="16,14">
+                <ui:CardControl.Icon>
+                    <ui:FontIcon FontSize="24" FontFamily="{DynamicResource SegoeFluentIcons}" Glyph="&#xE895;" />
+                </ui:CardControl.Icon>
+                <ui:CardControl.Header>
+                    <StackPanel>
+                        <TextBlock FontSize="16" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static p:Resources.Status_AutoSwitch}" />
+                        <TextBlock FontSize="13" Margin="0,4,0,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                                   Text="{x:Static p:Resources.Status_AutoSwitchDesc}" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="{Binding AutoEnabled, Mode=TwoWay}" />
+            </ui:CardControl>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
