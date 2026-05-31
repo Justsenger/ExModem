@@ -10,8 +10,8 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/Justsenger/ExModem/releases/latest"><img src="https://img.shields.io/github/v/release/Justsenger/ExModem.svg?style=flat-square" alt="Latest release"></a>
-  <a href="https://github.com/Justsenger/ExModem/releases"><img src="https://img.shields.io/github/downloads/Justsenger/ExModem/total.svg?style=flat-square&color=brightgreen" alt="Downloads"></a>
+  <a href="https://github.com/Justsenger/ExModem/releases/latest"><img src="https://img.shields.io/badge/release-V1.0-blue?style=flat-square" alt="Latest release"></a>
+  <a href="https://github.com/Justsenger/ExModem/releases"><img src="https://aged-moon-0505.shalingye.workers.dev/?repo=Justsenger/ExModem" alt="Downloads"></a>
   <a href="https://github.com/Justsenger/ExModem/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square" alt="License"></a>
 </p>
 
