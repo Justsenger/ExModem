@@ -5,7 +5,7 @@
 
 <div align="center">
 
-**一款图形化的蜂窝模块（Modem）管理工具，轻松收发短信、管理联系人、切换 4G/5G 等功能。**
+**A graphical cellular-modem manager — send & receive SMS, manage contacts, and switch between 4G/5G with ease.**
 
 </div>
 
@@ -15,53 +15,53 @@
   <a href="https://github.com/Justsenger/ExModem/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square" alt="License"></a>
 </p>
 
-**中文**
+**English** | [简体中文](docs/README.zh-CN.md) | [繁體中文](docs/README.zh-Hant.md) | [Русский](docs/README.ru.md) | [日本語](docs/README.ja.md)
 
 ---
 
-ExModem 使用 Windows 的 [MobileBroadband WinRT API](https://learn.microsoft.com/en-us/uwp/api/windows.networking.networkoperators) 结合高通 [QMI](https://en.wikipedia.org/wiki/Qualcomm_MSM_Interface) 命令，力图将 Windows 上的 Modem 能力开发到极致。
+ExModem uses Windows' [MobileBroadband WinRT API](https://learn.microsoft.com/en-us/uwp/api/windows.networking.networkoperators) together with Qualcomm [QMI](https://en.wikipedia.org/wiki/Qualcomm_MSM_Interface) commands, aiming to push the modem capabilities of Windows to their limit.
 
-适配环境：**Surface Pro 11 5G + 中国移动校园流量卡 + 4G / 5G 网络环境**。
+Tested environment: **Surface Pro 11 5G + a China Mobile campus data SIM + 4G / 5G networks**.
 
-由于个人时间和精力有限，项目可能存在未经测试的场景或错误。如果您在使用中遇到任何问题，欢迎通过 [Issues](https://github.com/Justsenger/ExModem/issues) 提出！
+As a one-person project with limited time, there may be untested scenarios or bugs. If you run into any problem, you're welcome to open an [Issue](https://github.com/Justsenger/ExModem/issues)!
 
-## 🎨 界面一览
+## 🎨 Screenshots
 
-ExModem 使用 [WPF-UI](https://github.com/lepoco/wpfui) 框架，界面现代流畅，支持浅色 / 深色主题并跟随系统自动切换。支持**简体中文、繁體中文、English、Русский、日本語**五种语言，首次启动自动跟随系统语言。
+ExModem is built with [WPF-UI](https://github.com/lepoco/wpfui) for a modern, fluid interface, with light / dark themes that follow the system. It ships in five languages — **简体中文, 繁體中文, English, Русский, 日本語** — and follows your system language on first launch.
 
-![界面1](https://github.com/Justsenger/ExModem/blob/main/img/01.png?raw=true)
-![界面2](https://github.com/Justsenger/ExModem/blob/main/img/02.png?raw=true)
-![界面3](https://github.com/Justsenger/ExModem/blob/main/img/03.png?raw=true)
-![界面4](https://github.com/Justsenger/ExModem/blob/main/img/04.png?raw=true)
-![界面5](https://github.com/Justsenger/ExModem/blob/main/img/05.png?raw=true)
+![Screenshot 1](https://github.com/Justsenger/ExModem/blob/main/img/01.png?raw=true)
+![Screenshot 2](https://github.com/Justsenger/ExModem/blob/main/img/02.png?raw=true)
+![Screenshot 3](https://github.com/Justsenger/ExModem/blob/main/img/03.png?raw=true)
+![Screenshot 4](https://github.com/Justsenger/ExModem/blob/main/img/04.png?raw=true)
+![Screenshot 5](https://github.com/Justsenger/ExModem/blob/main/img/05.png?raw=true)
 
-## ✨ 功能
+## ✨ Features
 
-### 📶 网络
-查看当前网络、运营商、信号强度等实时状态；一键在 **4G**（可收发短信）与 **5G**（高速上网）之间切换。也可开启**智能自动切换**：空闲时用 4G 保证短信实时，大流量时自动切到 5G 提速。
+### 📶 Network
+View real-time status — current network, carrier, signal strength and more; switch between **4G** (SMS-capable) and **5G** (high-speed data) with a single click. You can also enable **smart auto-switching**: stay on 4G while idle to keep SMS working in real time, and automatically move up to 5G under heavy traffic for speed.
 
-### 💬 短信
-像聊天软件一样收发短信：按号码归整成会话，收发气泡一目了然；自动识别短信里的**验证码**并一键复制；收到新短信弹出系统通知。
+### 💬 Messages
+Send and receive SMS like a chat app: messages are grouped into conversations by number, with clear sent/received bubbles; **verification codes** are detected automatically with one-tap copy; new messages raise a system notification.
 
-### 👤 联系人
-统一管理**本机**与 **SIM 卡**里的联系人：新增、修改、删除，可设置头像、按拼音首字母分组；短信页会自动用联系人的名字和头像显示号码。
+### 👤 Contacts
+Manage both **phone** and **SIM card** contacts in one place: add, edit, delete, set avatars, and group by pinyin initial. The Messages page automatically shows the contact's name and avatar for incoming numbers.
 
 > [!CAUTION]
-> **不支持通话。** 这类 Windows 蜂窝设备的基带大多被厂商配置为「纯数据」模块，没有语音线路：既不提供传统电路域（CS）的拨号能力，语音也只能走运营商的 VoLTE/IMS——而这条承载并未向应用开放，设备本身也缺少音频通路。因此无论用哪种方式都无法拨打 / 接听电话，这是硬件与固件层面的限制，并非软件能够解决。
+> **Voice calls are not supported.** The basebands in these Windows cellular devices are mostly provisioned by the vendor as data-only modules with no voice line: there is no traditional circuit-switched (CS) dialing, and voice would only work over the carrier's VoLTE/IMS — a bearer that is not exposed to apps, and the device also lacks an audio path. Therefore calls cannot be placed or received by any means. This is a hardware/firmware limitation, not something software can solve.
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎任何形式的贡献！
-- **测试与反馈**：帮助完善不同机型 / 固件 / 运营商下的兼容性。
-- **报告 Bug**：通过 [Issues](https://github.com/Justsenger/ExModem/issues) 提交。
-- **代码贡献**：Fork 项目并提交 Pull Request。
+Contributions of any kind are welcome!
+- **Testing & feedback**: help improve compatibility across devices / firmware / carriers.
+- **Report bugs**: via [Issues](https://github.com/Justsenger/ExModem/issues).
+- **Code**: fork the project and open a Pull Request.
 
-## ❤️ 支持项目
+## ❤️ Support
 
-如果你觉得这个项目对你有帮助，欢迎考虑赞助！
+If you find this project helpful, please consider sponsoring!
 
-[![Ko-fi](https://img.shields.io/badge/Sponsor-Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/saniye) &nbsp;&nbsp; [![爱发电](https://img.shields.io/badge/Sponsor-爱发电-633991?style=for-the-badge&logo=afdian&logoColor=white)](https://afdian.com/a/saniye)
+[![Ko-fi](https://img.shields.io/badge/Sponsor-Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/saniye) &nbsp;&nbsp; [![Afdian](https://img.shields.io/badge/Sponsor-爱发电-633991?style=for-the-badge&logo=afdian&logoColor=white)](https://afdian.com/a/saniye)
 
-## 📄 许可
+## 📄 License
 
-本项目基于 [GPL-3.0](LICENSE) 许可证开源。
+Released under the [GPL-3.0](LICENSE) license.
