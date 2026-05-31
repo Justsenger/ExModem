@@ -12,7 +12,6 @@
 <p align="center">
   <a href="https://github.com/Justsenger/ExModem/releases/latest"><img src="https://img.shields.io/github/v/release/Justsenger/ExModem.svg?style=flat-square" alt="Latest release"></a>
   <a href="https://github.com/Justsenger/ExModem/releases"><img src="https://img.shields.io/github/downloads/Justsenger/ExModem/total.svg?style=flat-square" alt="Downloads"></a>
-  <a href="https://github.com/Justsenger/ExModem/issues"><img src="https://img.shields.io/github/issues/Justsenger/ExModem.svg?style=flat-square" alt="Issues"></a>
   <a href="https://github.com/Justsenger/ExModem/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Justsenger/ExModem.svg?style=flat-square" alt="License"></a>
 </p>
 
@@ -20,7 +19,7 @@
 
 ---
 
-ExModem 使用 Windows 的 MobileBroadband WinRT API 结合高通 QMI 命令，力图将 Windows 上的 Modem 能力开发到极致。
+ExModem 使用 Windows 的 [MobileBroadband WinRT API](https://learn.microsoft.com/en-us/uwp/api/windows.networking.networkoperators) 结合高通 [QMI](https://en.wikipedia.org/wiki/Qualcomm_MSM_Interface) 命令，力图将 Windows 上的 Modem 能力开发到极致。
 
 适配环境：**Surface Pro 11 5G + 中国移动校园流量卡 + 4G / 5G 网络环境**。
 
